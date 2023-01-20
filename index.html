@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- Step 2 = creo il contenitore che ospiterà la mia istanza di Vue (ID app)-->
+        <div id="app">
+            <div class="welcome">
+                <h1>
+                    {{ welcome.title }}
+                </h1>
+
+                <!-- agiungere i due punti prima di src per Vue -->
+                <img :src="welcome.media" :alt="welcome.media">
+
+                <h2>
+                    {{ welcome.content }}
+                </h2>
+            </div>
+        </div>
+        <!-- Step 1: aggiungo la CDN di Vue che trovo nella documentazione ufficiale (https://vuejs.org/guide/quick-start.html#using-vue-from-cdn) -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- Step 3 = collego il file script.js -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
